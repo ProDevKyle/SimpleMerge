@@ -1,7 +1,8 @@
 /**
  * Created by Teacher on 1/28/2019.
  */
-public class SimpleMergeRunner {
+public class SimpleMergeRunner
+{
     public static void main(String[] args)
     {
         int[] arr1 = {1,3,5,7,9};
