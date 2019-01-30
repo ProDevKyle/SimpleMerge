@@ -9,23 +9,24 @@ public class SimpleMerge
     public static int[] simpleMerge(int[] arr1, int[] arr2)
     {
         int[] array = new int[arr1.length + arr2.length];
-        for (int i = 0; i < arr1.length - 1; i++)
+        for (int i = 0; i < arr1.length; i++)
         {
             array[i] = arr1[i];
         }
-        for (int i = 0; i < arr2.length - 1; i++)
+        for (int i = 0; i < arr2.length; i++)
         {
             array[arr1.length + i] = arr2[i];
         }
-        for (int i = 1; i < array.length; i++)
+        for (int i = 0; i < array.length; i++)
         {
             int num = array[i];
             int j;
-            for (j = i-1; j >= 0 && num < array[j]; j--)
+            for (j = i - 1; j >= 0 && num < array[j]; j--)
             {
-                array[j+1] = array[j];
+                array[j + 1] = array[j];
             }
-            array[j+1] = num;
+            array[j + 1] = num;
         }
+        return array;
     }
 }
